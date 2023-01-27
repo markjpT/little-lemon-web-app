@@ -24,9 +24,9 @@ const Footer = (props)=> {
                 <div>
                     <h4>Social Media Links</h4>
                     <ul>
-                        <li><a href='www.instagram.com'>Instagram</a></li>
-                        <li><a href='www.twitter.com'>Twitter</a></li>
-                        <li><a href='www.facebook.com'>Facebook</a></li>
+                        <li><a href='https://www.instagram.com'>Instagram</a></li>
+                        <li><a href='https://www.twitter.com'>Twitter</a></li>
+                        <li><a href='https://www.facebook.com'>Facebook</a></li>
                     </ul>
                 </div>
             </section>

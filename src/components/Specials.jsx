@@ -1,6 +1,8 @@
 const Specials = () => {
     return (
-        <h1>I am Special</h1>
+        <section id='specials'>
+            <h1>I am Special</h1>
+        </section>
     )
 }
 
