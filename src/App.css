@@ -37,6 +37,11 @@
   }
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 .allComponents * {
   color: black;
 }
@@ -79,6 +84,8 @@ a {
   justify-content: space-between;
   background-color: #333333;
   color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #footer > img {
