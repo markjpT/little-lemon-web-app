@@ -12,7 +12,7 @@ const Specials = () => {
             <view className="specials">
                 {specials.map(item => {
                     return (
-                        <view className='special'>
+                        <view key={item.id} className='special'>
                             <view className="special-content">
                                 <img src={item.image} alt={item.alt} />
                                 <view className="special-name">
