@@ -49,17 +49,32 @@ a {
   text-decoration: none;
 }
 
+/******************************************************************
+FOOTER
+*******************************************************************/
+
 #footer {
-  display: flex;
-  justify-content: space-between;
   background-color: #333333;
-  color: black;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
-#footer > img {
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding-top: 50px;
+}
+
+.footer-info > img {
   transform: rotate(45deg);
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  gap: 5px;
 }
 
 /******************************************************************
