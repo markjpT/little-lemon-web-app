@@ -17,15 +17,15 @@
 }
 
 section {
-  padding: 0px 150px;
+  padding: 0px 200px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 50px;
-  padding: 10px;
-  /* background-color: #282c34; */
+  padding: 5px;
 }
 
 nav > ul {
@@ -61,3 +61,71 @@ a {
 #footer > img {
   transform: rotate(45deg);
 }
+
+/******************************************************************
+HERO
+*******************************************************************/
+
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  height: 350px;
+  margin-bottom: 90px;
+}
+
+.hero-left-section > h1 {
+  color: var(--primary-color2);
+  font-size: 35px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.hero-left-section > h3 {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.hero-left-section > h3,
+.hero-left-section > p {
+  color: white;
+}
+
+.hero-left-section > p {
+  width: 250px;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: var(--primary-color2);
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+.button.reserve-button {
+  margin-top: 20px;
+}
+
+.hero-image {
+  position: relative;
+  top: 50px;
+  border-radius: 20px;
+}
+
+/******************************************************************
+SPECIALS
+*******************************************************************/
+
+.specials-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #ee9972; */
+}
+
+
+/******************************************************************
+TESTIMONIALS
+*******************************************************************/

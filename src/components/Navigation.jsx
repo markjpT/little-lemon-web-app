@@ -6,7 +6,7 @@ const Navigation = () => {
     return (
         <section id='header'>
           <nav>
-                <img src={Logo} alt='Logo' />
+                <Link to='/'><img src={Logo} alt='Little Lemon logo' /></Link>
                 <ul>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
