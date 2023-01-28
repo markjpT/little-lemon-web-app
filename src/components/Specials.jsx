@@ -6,7 +6,7 @@ const Specials = () => {
     return (
         <section id='specials-section'>
             <view className="specials-top">
-                <h2>This weeks specials!</h2>
+                <h2>This week's specials!</h2>
                 <button className="button order-online">Order online</button>
             </view>
             <view className="specials">
@@ -22,7 +22,7 @@ const Specials = () => {
                                 <p>{item.description}</p>
                             </view>
                             <view className='order'>
-                                Order a delivery <img src={require('../icons_assets/cyclist-icon.png')} alt='Cyclist icon' width='20px' />
+                                Order a delivery <img src={require('../icons_assets/scooter-icon.jpg')} alt='Cyclist icon' width='30px' />
                             </view>
                         </view>
                     )

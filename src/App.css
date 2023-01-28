@@ -196,10 +196,12 @@ SPECIALS
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .order > img {
-  padding-left: 10px;
+  padding-right: 10px;
+  transform: rotateY(180deg);
 }
 
 .special-name,
@@ -249,4 +251,42 @@ TESTIMONIALS
 .profile > img {
   width: 60px;
   border-radius: 10px;
+}
+
+/******************************************************************
+ABOUT
+*******************************************************************/
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+}
+
+.about-left-section > h1 {
+  color: var(--primary-color2);
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.about-left-section > h3 {
+  font-family:'Times New Roman', Times, serif;
+}
+
+.about-left-section > p {
+  margin-top: 20px;
+  width: 250px;
+}
+
+.about-image {
+  /* object-fit: contain; */
+  border-radius: 5px;
+  height: 200px;
+}
+
+.top {
+  position: relative;
+  left: 50px;
+  top: 50px;
 }
