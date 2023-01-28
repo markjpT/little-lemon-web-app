@@ -25,4 +25,28 @@ const specials = [
     }
 ]
 
-export default specials;
+const testimonials = [
+    {
+        id: 1,
+        name: 'Michael Spencer',
+        image: require('../icons_assets/michael.jpg'),
+        rating: '5',
+        testimonial: 'WOW!!! What an outstanding dinner you prepared at the south Little Lemon restuarant on Friday evening!!! It was an honor for me to be invited and experience firsthand your incredible culinary gift! MERCI BEAUCOUP seems soooooooo inadequate!'
+    },
+    {
+        id: 2,
+        name: 'Naomi Gordon',
+        image: require('../icons_assets/naomi.jpg'),
+        rating: '4.5',
+        testimonial: 'My friend and I were at Little Lemon last night for dinner. I want to thank you and the rest of the staff for the excellent food and service provided. It was our first visit and we both agreed that it was a wonderful experience.'
+    },
+    {
+        id: 3,
+        name: 'Kane Williams',
+        image: require('../icons_assets/kane.jpg'),
+        rating: '4.5',
+        testimonial: 'It is always a special treat to dine at Little Lemon. Last night my friend Anna and I had dinner at your wonderful restaurant before going to see a play at the La Jolla Playhouse.'
+    }
+]
+
+export {specials, testimonials}

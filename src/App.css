@@ -20,6 +20,10 @@ section {
   padding: 0px 200px;
 }
 
+/******************************************************************
+NAVIGATION
+*******************************************************************/
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -47,6 +51,7 @@ li {
 
 a {
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 /******************************************************************
@@ -133,6 +138,10 @@ HERO
 SPECIALS
 *******************************************************************/
 
+#specials-section {
+  margin-bottom: 80px;
+}
+
 .specials-top {
   display: flex;
   justify-content: space-between;
@@ -171,7 +180,14 @@ SPECIALS
 .special-name {
   display: flex;
   justify-content: space-between;
+  font-family:'Times New Roman', Times, serif;
 }
+
+.special-name > p {
+  color: var(--primary-color2);
+  font-weight: 600;
+}
+
 .special-content > p {
   font-size: .8rem;
 }
@@ -196,3 +212,8 @@ SPECIALS
 /******************************************************************
 TESTIMONIALS
 *******************************************************************/
+
+#testimonials {
+  height: 400px;
+  background-color: #333333;
+}
