@@ -265,7 +265,7 @@ ABOUT
 }
 
 .about-left-section > h1 {
-  color: var(--primary-color2);
+  color: var(--secondary-color);
   font-size: 30px;
   font-family:'Times New Roman', Times, serif;
 }
