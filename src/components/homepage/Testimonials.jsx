@@ -1,4 +1,4 @@
-import { testimonials } from "./data";
+import { testimonials } from "../data";
 
 const Testimonials = () => {
     return (
@@ -8,7 +8,7 @@ const Testimonials = () => {
                 {testimonials.map(item => {
                     return (
                         <view key={item.id} className="testimonial">
-                            <h5>Rating: {item.rating} <img src={require('../icons_assets/star-rating-icon.jpg')} alt='Star icon' width='20px' /></h5>
+                            <h5>Rating: {item.rating} <img src={require('../../icons_assets/star-rating-icon.jpg')} alt='Star icon' width='20px' /></h5>
                             <view className="profile">
                                 <img src={item.image} alt={item.name} />
                                 <p>{item.name}</p>

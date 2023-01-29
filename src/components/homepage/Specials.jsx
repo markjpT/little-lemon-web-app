@@ -1,5 +1,5 @@
 import React from 'react';
-import {specials} from './data';
+import {specials} from '../data';
 
 const Specials = () => {
 
@@ -22,7 +22,7 @@ const Specials = () => {
                                 <p>{item.description}</p>
                             </view>
                             <view className='order'>
-                                Order a delivery <img src={require('../icons_assets/scooter-icon.jpg')} alt='Cyclist icon' width='30px' />
+                                Order a delivery <img src={require('../../icons_assets/scooter-icon.jpg')} alt='Cyclist icon' width='30px' />
                             </view>
                         </view>
                     )
