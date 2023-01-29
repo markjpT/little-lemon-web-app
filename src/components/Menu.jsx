@@ -3,10 +3,7 @@ import React from "react";
 const Menu = () => {
     return (
         <section className="menu">
-            <p>Now</p>
-            <p>Now</p>
-            <p>Now</p>
-            <p>Now</p>
+            <h1>Coming Soon!</h1>
         </section>
     )
 }

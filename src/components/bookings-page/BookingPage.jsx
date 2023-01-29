@@ -2,7 +2,7 @@ import React from 'react'
 import './Styles.css'
 import BookingForm from './BookingForm'
 
-function BookingPage() {
+function BookingPage(props) {
   return (
     <>
         <section id="restaurant-display">
@@ -11,7 +11,7 @@ function BookingPage() {
             <img className='' src={require('../../icons_assets/restaurant.jpg')} alt='Resturant waiter holding food' />
         </section>
         <section id='booking'>
-                <BookingForm />
+                <BookingForm availableTimes={props.times} />
         </section>
     </>
   )
