@@ -8,7 +8,6 @@ const Hero = () => {
                 <h3>Chicago</h3>
                 <p>We are a family owned Mediterranian restuarant, focused on traditional recipes served with a modern twist.</p>
                 <Link to='/bookings'><button type='button' className='button reserve-button'>Reserve a table</button></Link>
-                
             </view>
             <view>
                 <img className='hero-image' src={require('../../icons_assets/restauranfood.jpg')} width='250px' alt='Resturant waiter holding food' />

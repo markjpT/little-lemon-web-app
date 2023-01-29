@@ -1,0 +1,84 @@
+:root{
+    --primary-color: #495E57;
+    --primary-color2: #f4ce14;
+    --secondary-color: #ee9972;
+    --secondary-color2: #fbdabb;
+    --secondary-color3: #edefee;
+    --secondary-color4: #333333;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/******************************************
+FORM
+*******************************************/
+
+#booking {
+    /* background-color: #495E57; */
+}
+
+#restaurant-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color4);
+    height: 350px;
+    padding-bottom: 50px;
+}
+
+#restaurant-display > img {
+    height: 200px;
+    border-radius: 5px;
+}
+
+#restaurant-display > img:nth-child(1) {
+    position: relative;
+    left: 50px;
+}
+
+#restaurant-display > img:nth-child(2) {
+    position: relative;
+    left: 250px;
+}
+
+#restaurant-display > img:nth-child(3) {
+    position: relative;
+    top: 90px;
+    right: 300px;
+}
+
+.reserve-form {
+    display: grid;
+    /* max-width: 400px; */
+    gap: 15px;
+    /* background-color: var(--secondary-color); */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* .form-input {
+    display: block;
+} */
+
+.form-input > input,
+.form-input > select {
+    /* font-size: 16px;
+    font-weight: 700; */
+    display: block;
+}
+
+/* #res-date,
+#res-time,
+#guests,
+#occation {
+    width: 100px
+} */
+
+.booking-form-button {
+    width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
