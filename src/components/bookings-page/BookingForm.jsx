@@ -12,6 +12,21 @@ function BookingForm(props) {
     const [guests, setGuests] = useState('');
     const [occasion, setOccasion] = useState('');
 
+    
+
+    function getDateObject (dateString) {
+        const yyyymmdd = dateString.split("-");
+        const dateObj = new Date(parseInt(yyyymmdd[0]), parseInt(yyyymmdd[1]) - 1, parseInt(yyyymmdd[2]));
+        return dateObj;
+    }
+
+    function isValidDate(dateString) {
+        const dateObj = getDateObject(dateString);
+        if (dateObj <= new Date())
+            return false;
+        return true;
+    }
+
     function handleEvent(e) {
         e.preventDefault()
         alert('Booked')
@@ -19,19 +34,30 @@ function BookingForm(props) {
     
     let arr = props.availableTimes;
 
+    function renderDate(e) {
+        if (!isValidDate(e.target.value)) {
+            alert(`Sorry! Reservations not available for this date!`);
+            return;
+        }
+
+        const selectedDate = getDateObject(e.target.value)
+        setDate(e.target.value)
+        props.dispatch({bookingDate: selectedDate})
+    }
+
   return (
         <>
         <h1 data-testid='heading'>Reserve a table</h1>
         <form className='reserve-form' onSubmit={handleEvent}>
             <div className="form-input">
                 <label htmlFor="res-date">Choose date:</label>
-                <input type="date" id="res-date" value={date} onChange={(e) => setDate(e.target.value)} required/>
+                <input type="date" id="res-date" value={date} onChange={renderDate} />
             </div>
             <div className="form-input">
                 <label htmlFor="res-time">Choose time:</label>
                 <select id="res-time" value={time} onChange={(e) => setTime(e.target.value)}>
                     {
-                    arr?.map((item, index) => {
+                    arr.map((item, index) => {
                         return (
                             <option key={index}>{item}</option>
                         )
