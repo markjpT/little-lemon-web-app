@@ -17,7 +17,8 @@ FORM
 *******************************************/
 
 #booking {
-    /* background-color: #495E57; */
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #restaurant-display {
@@ -54,31 +55,68 @@ FORM
     display: grid;
     /* max-width: 400px; */
     gap: 15px;
-    /* background-color: var(--secondary-color); */
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-/* .form-input {
-    display: block;
-} */
+.reserve-text {
+    text-align: center;
+    color: var(--secondary-color);
+}
 
 .form-input > input,
 .form-input > select {
     /* font-size: 16px;
     font-weight: 700; */
-    display: block;
+    /* display: block; */
+    margin-left: 20px;
 }
 
-/* #res-date,
-#res-time,
-#guests,
-#occation {
-    width: 100px
-} */
+.form-input > label {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.submit-button-container {
+    display: grid;
+    place-content: center;
+}
 
 .booking-form-button {
     width: 120px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.booking-info {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+}
+
+/******************************************
+CONFIRMED-BOOKING
+*******************************************/
+
+#confirmed-booking > img {
+    width: 100%;
+}
+
+.msg {
+    padding: 30px;
+    text-align: center;
+}
+
+#confirmed-booking > p {
+}
+
+.thanks-msg {
+    font-size: 1.1rem;
+
+}
+
+.restaurant-name {
+    color: var(--primary-color2);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
 }

@@ -7,6 +7,7 @@ import OrderOnline from './components/OrderOnline';
 import Login from './components/Login';
 import Footer from './components/Footer';
 import BookingPage from './components/bookings-page/BookingPage';
+import ConfirmedBooking from './components/bookings-page/ConfirmedBooking';
 import { Routes, Route } from 'react-router';
 import { useReducer } from 'react';
 import { fetchAPI, submitAPI } from './components/api/webApi';
@@ -37,7 +38,6 @@ function App() {
     <>
         <div className='allComponents'>
           <Navigation />
-          <h1>{initializeTimes()}</h1>
           <Routes>
               <Route path='/' element={<Homepage />} />
               <Route path='/about' element={<About />} />
@@ -45,6 +45,7 @@ function App() {
               <Route path='/order-online' element={<OrderOnline />} />
               <Route path='/login' element={<Login />} />
               <Route path='/bookings' element={<BookingPage times={availableTime} dispatchs={dispatch} />} />
+              <Route path='/confirmed-booking' element={<ConfirmedBooking />} />
           </Routes>
           <Footer />
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function BookingForm(props) {
     const initialDate = new Date();
@@ -29,6 +30,7 @@ function BookingForm(props) {
 
     function handleEvent(e) {
         e.preventDefault()
+
         alert('Booked')
     }
     
@@ -36,7 +38,7 @@ function BookingForm(props) {
 
     function renderDate(e) {
         if (!isValidDate(e.target.value)) {
-            alert(`Sorry! Reservations not available for this date!`);
+            alert(`Past dates are not valid, \nPlease choose another date`);
             return;
         }
 
@@ -47,7 +49,7 @@ function BookingForm(props) {
 
   return (
         <>
-        <h1 data-testid='heading'>Reserve a table</h1>
+        <h1 data-testid='heading' className='reserve-text'>Reserve a table</h1>
         <form className='reserve-form' onSubmit={handleEvent}>
             <div className="form-input">
                 <label htmlFor="res-date">Choose date:</label>
@@ -57,7 +59,7 @@ function BookingForm(props) {
                 <label htmlFor="res-time">Choose time:</label>
                 <select id="res-time" value={time} onChange={(e) => setTime(e.target.value)}>
                     {
-                    arr.map((item, index) => {
+                    arr?.map((item, index) => {
                         return (
                             <option key={index}>{item}</option>
                         )
@@ -75,8 +77,12 @@ function BookingForm(props) {
                     <option>Anniversary</option>
                 </select>
             </div>
-            <input type="submit" className='button booking-form-button' />
+            <div className="submit-button-container">
+            <Link to='/confirmed-booking'><input type="submit" className='button booking-form-button' /></Link>
+                
+            </div>
         </form>
+        <hr />
         <div className="booking-info">
             <p>Date: {date}</p>
             <p>Time: {time}</p>
