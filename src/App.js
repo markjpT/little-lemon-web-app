@@ -13,10 +13,6 @@ import { useReducer } from 'react';
 import { fetchAPI, submitAPI } from './components/api/webApi';
 // import {availableTimes} from './components/availableTimes';
 
-// const reducer = (availableTime, action) => {
-//   return availableTime
-// }
-
 function App() {
 
   function initializeTimes() {
@@ -28,6 +24,14 @@ function App() {
     const newBookingDate = action.bookingDate;
     const newTimes = fetchAPI(newBookingDate)
     return newTimes;
+  }
+
+  function submitForm(formData) {
+    const filled = submitAPI(formData);
+
+    if (filled) {
+      window.location.href = '/confirmed-booking';
+    }
   }
 
   // const updated = updateTimes();
@@ -44,7 +48,7 @@ function App() {
               <Route path='/menu' element={<Menu />} />
               <Route path='/order-online' element={<OrderOnline />} />
               <Route path='/login' element={<Login />} />
-              <Route path='/bookings' element={<BookingPage times={availableTime} dispatchs={dispatch} />} />
+              <Route path='/bookings' element={<BookingPage times={availableTime} dispatchs={dispatch} form={submitForm} />} />
               <Route path='/confirmed-booking' element={<ConfirmedBooking />} />
           </Routes>
           <Footer />

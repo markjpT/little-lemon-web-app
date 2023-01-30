@@ -11,7 +11,7 @@ function BookingPage(props) {
             <img className='' src={require('../../icons_assets/restaurant.jpg')} alt='Resturant waiter holding food' />
         </section>
         <section id='booking'>
-                <BookingForm availableTimes={props.times} dispatch={props.dispatchs} />
+                <BookingForm availableTimes={props.times} dispatch={props.dispatchs} formSubmit={props.form} />
         </section>
     </>
   )

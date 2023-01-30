@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 
 function BookingForm(props) {
     const initialDate = new Date();
@@ -30,10 +29,15 @@ function BookingForm(props) {
 
     function handleEvent(e) {
         e.preventDefault()
-
-        alert('Booked')
+        const reservationInfo = {
+            date,
+            time,
+            guests,
+            occasion
+        }
+        props.formSubmit(reservationInfo);
     }
-    
+
     let arr = props.availableTimes;
 
     function renderDate(e) {
@@ -78,8 +82,7 @@ function BookingForm(props) {
                 </select>
             </div>
             <div className="submit-button-container">
-            <Link to='/confirmed-booking'><input type="submit" className='button booking-form-button' /></Link>
-                
+            <input type="submit" className='button booking-form-button' />
             </div>
         </form>
         <hr />
