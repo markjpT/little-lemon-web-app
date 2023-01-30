@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 
 function BookingForm(props) {
-    const [date, setDate] = useState('');
+    const initialDate = new Date();
+    initialDate.setDate(initialDate.getDate() + 1);
+    const yyyy = initialDate.getFullYear();
+    const mm = initialDate.getMonth() < 10 ? "0" + (initialDate.getMonth() + 1) : initialDate.getMonth() + 1;
+    const dd = initialDate.getDate() < 10 ? "0" + initialDate.getDate() : initialDate.getDate();
+
+    const [date, setDate] = useState(yyyy + "-" + mm + "-" + dd);
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState('');
     const [occasion, setOccasion] = useState('');
@@ -10,9 +16,12 @@ function BookingForm(props) {
         e.preventDefault()
         alert('Booked')
     }
+    
+    let arr = props.availableTimes;
 
   return (
         <>
+        <h1 data-testid='heading'>Reserve a table</h1>
         <form className='reserve-form' onSubmit={handleEvent}>
             <div className="form-input">
                 <label htmlFor="res-date">Choose date:</label>
@@ -21,7 +30,8 @@ function BookingForm(props) {
             <div className="form-input">
                 <label htmlFor="res-time">Choose time:</label>
                 <select id="res-time" value={time} onChange={(e) => setTime(e.target.value)}>
-                    {props.availableTimes.map((item, index) => {
+                    {
+                    arr?.map((item, index) => {
                         return (
                             <option key={index}>{item}</option>
                         )
