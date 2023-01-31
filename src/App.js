@@ -8,7 +8,7 @@ import Login from './components/Login';
 import Footer from './components/Footer';
 import BookingPage from './components/bookings-page/BookingPage';
 import ConfirmedBooking from './components/bookings-page/ConfirmedBooking';
-import { Routes, Route } from 'react-router';
+import { Routes, Route, useNavigate } from 'react-router';
 import { useReducer } from 'react';
 import { fetchAPI, submitAPI } from './components/api/webApi';
 // import {availableTimes} from './components/availableTimes';
@@ -25,13 +25,13 @@ function App() {
     const newTimes = fetchAPI(newBookingDate)
     return newTimes;
   }
+  const navigate = useNavigate();
 
   function submitForm(formData) {
     const filled = submitAPI(formData);
 
-    if (filled) {
-      window.location.href = '/confirmed-booking';
-    }
+    if (!filled) return;
+    navigate('/confirmed-booking');
   }
 
   // const updated = updateTimes();
