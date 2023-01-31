@@ -1,5 +1,6 @@
 import React from 'react';
 import {specials} from '../data';
+import { Link } from 'react-router-dom';
 
 const Specials = () => {
 
@@ -7,7 +8,7 @@ const Specials = () => {
         <section id='specials-section'>
             <view className="specials-top">
                 <h2>This week's specials!</h2>
-                <button className="button order-online">Order online</button>
+                <button className="button order-online"><Link to='/order-online'>Order online</Link></button>
             </view>
             <view className="specials">
                 {specials.map(item => {

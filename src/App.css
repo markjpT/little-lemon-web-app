@@ -39,6 +39,12 @@ nav > ul {
 
 nav > ul > li > a {
   font-weight: bold;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav > ul > li > a:hover {
+  color: var(--primary-color2);
 }
 
 ul {
@@ -51,7 +57,6 @@ li {
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 /******************************************************************
