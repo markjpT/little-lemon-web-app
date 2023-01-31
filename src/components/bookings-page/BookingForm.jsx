@@ -1,18 +1,11 @@
 import React, { useState } from 'react'
 
 function BookingForm(props) {
-    const initialDate = new Date();
-    initialDate.setDate(initialDate.getDate() + 1);
-    const yyyy = initialDate.getFullYear();
-    const mm = initialDate.getMonth() < 10 ? "0" + (initialDate.getMonth() + 1) : initialDate.getMonth() + 1;
-    const dd = initialDate.getDate() < 10 ? "0" + initialDate.getDate() : initialDate.getDate();
-
-    const [date, setDate] = useState(yyyy + "-" + mm + "-" + dd);
-    const [time, setTime] = useState('');
+    const [date, setDate] = useState('');
+    const [time, setTime] = useState(props.availableTimes[0]);
     const [guests, setGuests] = useState('');
     const [occasion, setOccasion] = useState('');
 
-    
 
     function getDateObject (dateString) {
         const yyyymmdd = dateString.split("-");
@@ -35,6 +28,7 @@ function BookingForm(props) {
             guests,
             occasion
         }
+        if (!date && !occasion && !guests) return;
         props.formSubmit(reservationInfo);
     }
 
@@ -42,7 +36,7 @@ function BookingForm(props) {
 
     function renderDate(e) {
         if (!isValidDate(e.target.value)) {
-            alert(`Past dates are not valid, \nPlease choose another date`);
+            alert(`Current date and past dates are not valid, \nPlease choose another date`);
             return;
         }
 
@@ -57,7 +51,7 @@ function BookingForm(props) {
         <form className='reserve-form' onSubmit={handleEvent}>
             <div className="form-input">
                 <label htmlFor="res-date">Choose date:</label>
-                <input type="date" id="res-date" value={date} onChange={renderDate} />
+                <input type="date" id="res-date" value={date} onChange={renderDate} required/>
             </div>
             <div className="form-input">
                 <label htmlFor="res-time">Choose time:</label>
@@ -72,17 +66,19 @@ function BookingForm(props) {
             </div>
             <div className="form-input">
                 <label htmlFor="guests">Number of guests:</label>
-                <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={(e) => setGuests(e.target.value)} required/>
+                <input type="number" placeholder="0" min="1" max="10" id="guests" value={guests} onChange={(e) => setGuests(e.target.value)} required/>
             </div>
             <div className="form-input">
                 <label htmlFor="occasion">Occasion:</label>
-                <select id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                <select id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)} required>
+                    <option></option>
+                    <option>None</option>
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
             </div>
             <div className="submit-button-container">
-            <input type="submit" className='button booking-form-button' />
+            <input type="submit" value='Reserve' className='button booking-form-button' />
             </div>
         </form>
         <hr />
