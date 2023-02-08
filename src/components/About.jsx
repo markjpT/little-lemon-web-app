@@ -4,7 +4,7 @@ const About = () => {
             <view className='about-left-section'>
                 <h1>Little Lemon</h1>
                 <h3>Chicago</h3>
-                <p>We are a family owned Mediterranian restuarant, focused on traditional recipes served with a modern twist.</p>
+                <p>We are a family owned Mediterranian restaurant, focused on traditional recipes served with a modern twist.</p>
             </view>
             <view>
                 <img className='top about-image' src={require('../icons_assets/restaurant.jpg')} alt='Resturant waiter holding food' />

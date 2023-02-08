@@ -299,3 +299,14 @@ ABOUT
   left: 50px;
   top: 50px;
 }
+
+/******************************************************************
+COMING-SOON
+*******************************************************************/
+.menu,
+.online-order,
+.login {
+  display: grid;
+  place-content: center;
+  height: 60vh;
+}

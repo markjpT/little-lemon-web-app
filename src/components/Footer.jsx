@@ -21,7 +21,7 @@ const Footer = (props)=> {
                         <h4>Contact</h4>
                         <p>97 Bob Junction</p>
                         <p>+31 505 256 2654</p>
-                        <p>littlelemon@restuarant.com</p>
+                        <p>littlelemon@restaurant.com</p>
                     </div>
                     <div>
                         <h4>Social Media Links</h4>
