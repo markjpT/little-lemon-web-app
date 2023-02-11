@@ -34,7 +34,6 @@ function App() {
     navigate('/confirmed-booking');
   }
 
-  // const updated = updateTimes();
   const initialState = initializeTimes();
   const [availableTime, dispatch] = useReducer(updateTimes, initialState);
 
