@@ -38,7 +38,6 @@ function App() {
   const [availableTime, dispatch] = useReducer(updateTimes, initialState);
 
   return (
-    <>
         <div className='allComponents'>
           <Navigation />
           <Routes>
@@ -52,7 +51,6 @@ function App() {
           </Routes>
           <Footer />
         </div>
-    </>
   );
 }
 
