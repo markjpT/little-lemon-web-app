@@ -4,20 +4,20 @@ const Testimonials = () => {
     return (
         <section id='testimonials'>
             <h2>Testimonials</h2>
-            <view className="testimonials">
+            <div className="testimonials">
                 {testimonials.map(item => {
                     return (
-                        <view key={item.id} className="testimonial">
+                        <div key={item.id} className="testimonial">
                             <h5>Rating: {item.rating} <img src={require('../../icons_assets/star-rating-icon.jpg')} alt='Star icon' width='20px' /></h5>
-                            <view className="profile">
+                            <div className="profile">
                                 <img src={item.image} alt={item.name} />
                                 <p>{item.name}</p>
-                            </view>
+                            </div>
                             <p>{item.testimonial}</p>
-                        </view>
+                        </div>
                     )
                 })}
-            </view>
+            </div>
         </section>
     )
 }

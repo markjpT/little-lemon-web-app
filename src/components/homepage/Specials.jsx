@@ -6,29 +6,29 @@ const Specials = () => {
 
     return (
         <section id='specials-section'>
-            <view className="specials-top">
+            <div className="specials-top">
                 <h2>This week's specials!</h2>
                 <button className="button order-online"><Link to='/order-online'>Order online</Link></button>
-            </view>
-            <view className="specials">
+            </div>
+            <div className="specials">
                 {specials.map(item => {
                     return (
-                        <view key={item.id} className='special'>
-                            <view className="special-content">
+                        <div key={item.id} className='special'>
+                            <div className="special-content">
                                 <img src={item.image} alt={item.alt} />
-                                <view className="special-name">
+                                <div className="special-name">
                                     <h4>{item.title}</h4>
                                     <p>{item.price}</p>
-                                </view>
+                                </div>
                                 <p>{item.description}</p>
-                            </view>
-                            <view className='order'>
+                            </div>
+                            <div className='order'>
                                 Order a delivery <img src={require('../../icons_assets/scooter-icon.jpg')} alt='Cyclist icon' width='30px' />
-                            </view>
-                        </view>
+                            </div>
+                        </div>
                     )
                 })}
-            </view>
+            </div>
         </section>
     )
 }

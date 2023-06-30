@@ -4,7 +4,7 @@ import Logo from '../icons_assets/logo.svg'
 const Footer = (props)=> {
     return (
             <section id='footer'>
-                <view className="footer-info">
+                <div className="footer-info">
                     <img src={Logo} alt='Logo' />
                     <div className='doormat-navigation'>
                         <h4>Doormat Navigation</h4>
@@ -31,11 +31,11 @@ const Footer = (props)=> {
                             <li><a href='https://www.facebook.com'>Facebook</a></li>
                         </ul>
                     </div>
-                </view>
-                <view className="copyright">
+                </div>
+                <div className="copyright">
                     Copyright ©️ 2023 Gelo
                     <a href='https://www.github.com/Bongani001' target='_blank' rel="noreferrer"><img src={require('../icons_assets/github-logo.png')} alt='Github logo' style={{width: 20, borderRadius: 5}} /></a>
-                </view>
+                </div>
             </section>
     )
 }
