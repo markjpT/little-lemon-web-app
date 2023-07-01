@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
 :root{
     --primary-color: #495E57;
     --primary-color2: #f4ce14;
@@ -19,36 +22,21 @@ FORM
 #booking {
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: var(--secondary-color4);
 }
 
 #restaurant-display {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color4);
     height: 350px;
     padding-bottom: 50px;
+    gap: 30px;
 }
 
 #restaurant-display > img {
     height: 200px;
     border-radius: 5px;
-}
-
-#restaurant-display > img:nth-child(1) {
-    position: relative;
-    left: 50px;
-}
-
-#restaurant-display > img:nth-child(2) {
-    position: relative;
-    left: 250px;
-}
-
-#restaurant-display > img:nth-child(3) {
-    position: relative;
-    top: 90px;
-    right: 300px;
 }
 
 .reserve-form {
@@ -60,32 +48,49 @@ FORM
 }
 
 .reserve-text {
-    text-align: center;
-    color: var(--secondary-color);
+    color: var(--primary-color2);
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+/**************************************************/
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.left-form,
+.right-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+
 }
 
 .form-input > input,
 .form-input > select {
-    /* font-size: 16px;
-    font-weight: 700; */
-    /* display: block; */
-    margin-left: 20px;
-}
-
-.form-input > label {
-    text-transform: uppercase;
-    font-size: 12px;
+    width: 80%;
+    /* height: 2rem; */
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
 }
 
 .submit-button-container {
     display: grid;
     place-content: center;
-}
-
-.booking-form-button {
-    width: 120px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 20px;
 }
 
 .booking-info {
