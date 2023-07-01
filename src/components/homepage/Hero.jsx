@@ -10,7 +10,7 @@ const Hero = () => {
                 <Link to='/bookings'><button type='button' className='button reserve-button'>Reserve a table</button></Link>
             </div>
             <div>
-                <img className='hero-image' src={require('../../icons_assets/restauranfood.jpg')} width='250px' alt='Resturant waiter holding food' />
+                <img className='hero-image' src={require('../../icons_assets/restaurantfood.webp')} width='250px' alt='Resturant waiter holding food' />
             </div>
         </section>
     )
