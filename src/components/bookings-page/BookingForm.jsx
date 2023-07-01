@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 function BookingForm(props) {
     const [date, setDate] = useState('');
     const [time, setTime] = useState(props.availableTimes[0]);
@@ -31,6 +30,7 @@ function BookingForm(props) {
         }
         if (!date && !occasion && !guests) return;
         props.formSubmit(reservationInfo);
+        props.setBookingStage(true);
     }
 
     let arr = props.availableTimes;
@@ -48,7 +48,7 @@ function BookingForm(props) {
 
   return (
         <>
-        <h1 data-testid='heading' className='reserve-text'>Reservetions</h1>
+        <h1 data-testid='heading' className='reserve-text'>Reservations</h1>
         <form className='reserve-form' onSubmit={handleEvent}>
             <div className="form-container">
                 <div className="left-form">
@@ -90,14 +90,6 @@ function BookingForm(props) {
                 <input type="submit" value='Reserve a Table' className='button booking-form-button' />
             </div>
         </form>
-        <hr />
-        <div className="booking-info">
-            <p>Date: {date}</p>
-            <p>Time: {time}</p>
-            <p>Number of guests: {guests}</p>
-            <p>Occasion: {occasion}</p>
-
-        </div>
         </>
   )
 }

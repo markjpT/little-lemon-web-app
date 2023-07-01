@@ -54,11 +54,15 @@ FORM
     font-weight: bold;
 }
 
-/**************************************************/
+/************************
+RESERVATION FORM
+**************************/
+
 
 .form-container {
     display: flex;
     justify-content: space-around;
+    color: white;
 }
 
 .left-form,
@@ -67,7 +71,7 @@ FORM
     flex-direction: column;
     gap: 20px;
     width: 100%;
-
+    /* align-items: center; */
 }
 
 .form-input {
@@ -75,7 +79,7 @@ FORM
     flex-direction: column;
     gap: 10px;
     color: white;
-
+    width: 100%;
 }
 
 .form-input > input,
@@ -93,10 +97,38 @@ FORM
     margin-top: 20px;
 }
 
+/************************
+CONFIRM BOOKING FORM
+**************************/
+
+.left-inputs-container,
+.right-inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
 .booking-info {
-    display: grid;
-    gap: 10px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    /* margin-right: 100px; */
+}
+
+.booking-info > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.requests {
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 /******************************************

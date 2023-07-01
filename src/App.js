@@ -8,12 +8,14 @@ import Login from './components/Login';
 import Footer from './components/Footer';
 import BookingPage from './components/bookings-page/BookingPage';
 import ConfirmedBooking from './components/bookings-page/ConfirmedBooking';
-import { Routes, Route, useNavigate } from 'react-router';
-import { useReducer } from 'react';
-import { fetchAPI, submitAPI } from './components/api/webApi';
+import { Routes, Route } from 'react-router';
+import { useReducer, useState } from 'react';
+import { fetchAPI} from './components/api/webApi';
 // import {availableTimes} from './components/availableTimes';
 
 function App() {
+
+  const [userBookingInfo, setUserBookingInfo] = useState({});
 
   function initializeTimes() {
     const times = fetchAPI(new Date())
@@ -25,13 +27,10 @@ function App() {
     const newTimes = fetchAPI(newBookingDate)
     return newTimes;
   }
-  const navigate = useNavigate();
 
   function submitForm(formData) {
-    const filled = submitAPI(formData);
-
-    if (!filled) return;
-    navigate('/confirmed-booking');
+    // const filled = submitAPI(formData);
+    setUserBookingInfo(formData);;
   }
 
   const initialState = initializeTimes();
@@ -46,7 +45,7 @@ function App() {
               <Route path='/menu' element={<Menu />} />
               <Route path='/order-online' element={<OrderOnline />} />
               <Route path='/login' element={<Login />} />
-              <Route path='/bookings' element={<BookingPage times={availableTime} dispatchs={dispatch} form={submitForm} />} />
+              <Route path='/bookings' element={<BookingPage times={availableTime} dispatchs={dispatch} form={submitForm} userInfo={userBookingInfo} />} />
               <Route path='/confirmed-booking' element={<ConfirmedBooking />} />
           </Routes>
           <Footer />

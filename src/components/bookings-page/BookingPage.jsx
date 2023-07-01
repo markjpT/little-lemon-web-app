@@ -1,12 +1,16 @@
-import React from 'react'
-import './Styles.css'
-import BookingForm from './BookingForm'
+import React, { useState } from 'react';
+import './Styles.css';
+import BookingForm from './BookingForm';
+import PersonlDetails from './PersonlDetails';
 
 function BookingPage(props) {
+  const [bookingStage, setBookingStage] = useState(false);
+
   return (
     <>
         <section id='booking'>
-                <BookingForm availableTimes={props.times} dispatch={props.dispatchs} formSubmit={props.form} />
+          {bookingStage ? <PersonlDetails userInfo={props.userInfo} /> : 
+              <BookingForm availableTimes={props.times} dispatch={props.dispatchs} formSubmit={props.form} setBookingStage={setBookingStage} />}
         </section>
         <section id="restaurant-display">
             <img className='' src={require('../../icons_assets/restaurant-chef-b.webp')} alt='Resturant waiter holding food' />
